@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+  }
+
+  header {
+    padding: 20px;
+    text-align: center;
+    background: whitesmoke;
+    color: rgb(165, 14, 14);
+  }
+
+  header h4 {
+    font-size: 36px;
+  }
+
+  .card-content {
+    text-align: center;
+  }
+
+  .card-bottom {
+    text-align: center;
+  }
