@@ -1,7 +1,12 @@
-//selecting card-bottom html
+//selecting card-bottom from the html
 var cardBtnContainer = document.querySelector(".card-bottom"); 
 //makes a button
 var questionBtn = document.createElement("button"); 
+
+var choiceEl1 = document.createElement("button");
+var choiceEl2 = document.createElement("button");
+var choiceEl3 = document.createElement("button");
+var choiceEl4 = document.createElement("button");
 
 const questions = [
     {
@@ -28,13 +33,8 @@ var questionIndex = 0;
 
 console.log(cardBtnContainer);
 
-//put text inside button
-// questionBtn.textContent = questions[questionIndex].choices[2]; 
-//adds button to view on screen
-// cardBtnContainer.appendChild(questionBtn); 
-
-
 function startingGame () {
+
 //  cardText is js var. looks for card-content in html
 var cardText = document.querySelector(".card-content");
 
@@ -71,4 +71,34 @@ function btnclick () {
 
 startingGame();
 
-element.addEventListener("click", questionBtn);
+// element.addEventListener("click", questionBtn); failed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//put text inside button
+// questionBtn.textContent = questions[questionIndex].choices[2]; 
+//adds button to view on screen
+// cardBtnContainer.appendChild(questionBtn); 
