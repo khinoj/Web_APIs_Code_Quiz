@@ -1,7 +1,11 @@
 //selecting card-bottom from the html
-var cardBtnContainer = document.querySelector(".card-bottom"); 
+var cardBtnContainer = document.querySelector(".card-bottom");
+
+//selecting start-button from the html
+var startBtnContainer = document.querySelector(".start-button");
+
 //makes a button
-var questionBtn = document.createElement("button"); 
+var questionBtn = document.createElement("button");
 
 const questions = [
     {
@@ -25,8 +29,17 @@ var questionAnswer = "";
 
 var questionIndex = 0;
 
+// console.log(cardBtnContainer);
 
-console.log(cardBtnContainer);
+function startbutton () {
+  var startButtonEl = document.querySelector('.start-button');
+  var starttext = document.createElement("button")
+  starttext.innerHTML = "Start The Quiz";
+  startButtonEl.appendChild(starttext);
+  starttext.addEventListener("onclick", startingGame);
+};
+
+
 
 function startingGame () {
 
@@ -37,7 +50,6 @@ var cardText = document.querySelector(".card-content");
 cardBtnContainer.innerHTML = " ";
 cardText.innerHTML = " ";
 
-
 // creates and h2
 var questionText = document.createElement("h2");
 
@@ -46,7 +58,6 @@ questionText.textContent = questions[questionIndex].Question;
 
 // push the h2 to html and questiontext content.
 cardText.appendChild(questionText);
-
 
 for ( var i =0; i < questions[questionIndex].choices.length; i++) {
   var questionBtn = document.createElement("button");
@@ -68,10 +79,8 @@ function questionClick(event) {
     console.log("Correct")
   }
   questionIndex++
+  startingGame();
 }
-
-
-
 
 // function btnclick () {
 //   questionIndex++
@@ -80,9 +89,10 @@ function questionClick(event) {
 //   startingGame();
 //  }
 
+
+startbutton();
 startingGame();
 
-// element.addEventListener("click", questionBtn); failed
 
 
 
