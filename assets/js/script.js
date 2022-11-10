@@ -40,7 +40,6 @@ function startbutton () {
 };
 
 
-
 function startingGame () {
 
 //  cardText is js var. looks for card-content in html
@@ -92,32 +91,6 @@ function questionClick(event) {
 
 startbutton();
 startingGame();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //put text inside button
 // questionBtn.textContent = questions[questionIndex].choices[2]; 
