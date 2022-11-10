@@ -3,11 +3,6 @@ var cardBtnContainer = document.querySelector(".card-bottom");
 //makes a button
 var questionBtn = document.createElement("button"); 
 
-var choiceEl1 = document.createElement("button");
-var choiceEl2 = document.createElement("button");
-var choiceEl3 = document.createElement("button");
-var choiceEl4 = document.createElement("button");
-
 const questions = [
     {
     Question: "Inside which HTML element do we put the JavaScript?",
@@ -56,18 +51,34 @@ cardText.appendChild(questionText);
 for ( var i =0; i < questions[questionIndex].choices.length; i++) {
   var questionBtn = document.createElement("button");
   questionBtn.textContent = questions[questionIndex].choices[i];
-  questionBtn.setAttribute("onclick", "btnclick()");
+  questionBtn.setAttribute("onclick", "questionClick(event)");
   cardBtnContainer.appendChild(questionBtn);
 }
 };
 
-
-function btnclick () {
+function questionClick(event) {
+  var answerCheck = event.target;
+  // console.log(answerCheck);
+  // console.log(answerCheck.innerText, questions[questionIndex].answer)
+  if (answerCheck.innerText !== questions[questionIndex].answer) {
+    console.log("Wrong!")
+  } else {
+    var correctEl = document.createElement("p");
+    correctEl.innerText = "Correct" 
+    console.log("Correct")
+  }
   questionIndex++
-  console.log("Hello");
-  // if for answer.
-  startingGame();
 }
+
+
+
+
+// function btnclick () {
+//   questionIndex++
+//   console.log("Hello");
+//   // if for answer.
+//   startingGame();
+//  }
 
 startingGame();
 
