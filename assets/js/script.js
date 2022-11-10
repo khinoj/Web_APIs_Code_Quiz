@@ -2,7 +2,7 @@
 var cardBtnContainer = document.querySelector(".card-bottom");
 
 //selecting start-button from the html
-var startBtnContainer = document.querySelector(".start-button");
+// var startBtnContainer = document.querySelector(".start-button");
 
 //makes a button
 var questionBtn = document.createElement("button");
@@ -31,13 +31,13 @@ var questionIndex = 0;
 
 // console.log(cardBtnContainer);
 
-function startbutton () {
-  var startButtonEl = document.querySelector('.start-button');
-  var starttext = document.createElement("button")
-  starttext.innerHTML = "Start The Quiz";
-  startButtonEl.appendChild(starttext);
-  starttext.addEventListener("onclick", startingGame);
-};
+// function startbutton () {
+//   var startButtonEl = document.querySelector('.start-button');
+//   var starttext = document.createElement("button")
+//   starttext.innerHTML = "Start The Quiz";
+//   startButtonEl.appendChild(starttext);
+//   starttext.addEventListener("onclick", startingGame);
+// };
 
 
 function startingGame () {
@@ -89,7 +89,7 @@ function questionClick(event) {
 //  }
 
 
-startbutton();
+// startbutton();
 startingGame();
 
 //put text inside button
