@@ -1,3 +1,22 @@
+//timer
+var timer;
+var timerCount;
+var timerElement = document.querySelector('#clock-timer');
+var timerText = document.querySelector('#timer-text');
+function startTimer() {
+  // Sets timer
+  timerCount = 120;
+  timer = setInterval(function() {
+    timerCount--;
+    timerText.textContent = timerCount;
+    if (timerCount === 0) {
+      // Clears interval
+      clearInterval(timer);
+    }
+  }, 1000);
+}
+startTimer();
+
 //selecting card-bottom from the html
 var cardBtnContainer = document.querySelector(".card-bottom");
 
